@@ -1,0 +1,26 @@
+# Copy to .dev.vars for local development. Do not commit .dev.vars.
+# Replace every placeholder below with real values before deploying.
+#
+# The Deploy to Cloudflare button also reads this file to know which Worker
+# secrets to prompt for. Keep only secret values here; non-secret defaults live
+# in wrangler.toml [vars].
+TELEGRAM_BOT_TOKEN=123456789:AAExampleTokenReplaceMe
+TELEGRAM_CHAT_ID=123456789
+ADMIN_TOKEN=replace-with-a-long-random-token
+# 32 bytes, used to encrypt the dashboard settings in KV.
+# Generate with: openssl rand -hex 32
+SETTINGS_KEY=replace-with-64-hex-characters
+MAILBOXES=[{"email":"you@gmail.com","password":"app-password","host":"imap.gmail.com","port":993}]
+
+# Optional: verification code -> SyncClipboard WebDAV
+# ENABLE_EVC=false
+# WEBDAV_URL=
+# WEBDAV_USERNAME=
+# WEBDAV_PASSWORD=
+# WEBDAV_PATH=SyncClipboard.json
+
+# Optional: IMAP listener
+# LISTEN_MODE=poll
+# POLL_WINDOW_SECONDS=45
+# POLL_INTERVAL_SECONDS=20
+# IDLE_WINDOW_SECONDS=40
